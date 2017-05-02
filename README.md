@@ -15,6 +15,9 @@ Things you may want to cover:
 
 * Database initialization
 
+* Database problems
+- May 2nd: learned about command "rails db:schema:load" after running "rails db:drop" to reset database after random postgres problem. Use this if running "rails db:migrate" appears to do nothing. it actually creates a /db/schema.rb file where I pasted code from the source code on Jordan's github. 
+
 * How to run the test suite
 
 * Services (job queues, cache servers, search engines, etc.)
