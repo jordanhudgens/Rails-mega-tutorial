@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :portfolios
+
+  # customize route for an individual portfolio
+  resources :portfolios, except: [:show]
+  get 'portfolio/:id', to: 'portfolios#show', as: 'porfolio_show'
   resources :blogs
 
   # default...
