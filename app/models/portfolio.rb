@@ -22,3 +22,4 @@ class Portfolio < ApplicationRecord
     # without pipes, this would re-assign, even if an image was included. "||" only assigns if value is nil.
   end
 end
+#Portfolio.create!(title: 'web app', subtitle: 'dkljfakl', body: 'titljasdkfjakldf', technologies_attributes: [{name: 'Ruby'}, {name: 'Rails'}, {name: 'Angular'}, {name: 'Ionic'}])
