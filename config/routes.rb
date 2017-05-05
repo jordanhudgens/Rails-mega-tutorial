@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
-  resources :portfolios
-  resources :blogs
+
+  # customize route for an individual portfolio
+  resources :portfolios, except: [:show]
+  get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
+
+  # for practice only
+  get 'angular-items', to: 'portfolios#angular_items'
+  get 'ruby-items', to: 'portfolios#ruby'
+  ###################
+  resources :blogs do
+    member do
+      get :toggle_status
+    end
+  end
 
   # default...
   # get 'pages/home'
