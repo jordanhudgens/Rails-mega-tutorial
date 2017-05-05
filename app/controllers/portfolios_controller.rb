@@ -1,7 +1,22 @@
 class PortfoliosController < ApplicationController
+
+  ## added following b/c I was getting error: ruby ActionController::InvalidAuthenticityToken
+  ## after adding default image values to portfolio create action.
+  skip_before_action :verify_authenticity_token
+  ####################
+  
   def index
     @portfolio_items = Portfolio.all
   end
+
+# for practice only
+  def angular_items
+    @angular_items = Portfolio.angular
+  end
+  def ruby
+    @ruby_items = Portfolio.ruby_on_rails_portfolio_items
+  end
+  #################
 
   def new
     @portfolio_item = Portfolio.new
