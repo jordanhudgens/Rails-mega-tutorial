@@ -17,10 +17,11 @@
 
           <%= render "shared/application_nav" %>
 
-          <%= login_helper %>
-
           <%= yield %>
           <!-- yeild is where all other pages display within the layout -->
+
+          <%= render "shared/application_footer" %>
+
           <%=  source_helper %>
         </div>
       </div>
