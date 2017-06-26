@@ -2,6 +2,7 @@ class PortfoliosController < ApplicationController
   ## added following b/c I was getting error: ruby ActionController::InvalidAuthenticityToken
   ## after adding default image values to portfolio create action.
   skip_before_action :verify_authenticity_token
+  layout "portfolio"
 
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
   ####################
