@@ -14,6 +14,11 @@ class Portfolio < ApplicationRecord
   scope :ruby_on_rails_portfolio_items, -> { where(subtitle: 'Ruby on Rails') }
   ##########################################################
 
+  def self.by_position
+    order("position ASC")
+  end
+
+
   after_initialize :set_defaults   # initialize happens when the new action is called in the portfolio ctlr...when a NEW portfolio object is created based on this Portfolio class
 
   def set_defaults
