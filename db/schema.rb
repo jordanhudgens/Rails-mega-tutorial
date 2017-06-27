@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20170627225549) do
     t.integer  "status",     default: 0
     t.integer  "topic_id"
     t.string   "slug"
+    t.index ["slug"], name: "index_blogs_on_slug", unique: true, using: :btree
     t.index ["topic_id"], name: "index_blogs_on_topic_id", using: :btree
   end
 
