@@ -83,3 +83,4 @@ production:
   database: DevcampPortfolio_production
   username: DevcampPortfolio
   password: <%= ENV['DEVCAMPPORTFOLIO_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
